@@ -1,3 +1,7 @@
+//node sample clone or fork from heroku url from lecture 1
+
+
+
 var express = require('express');
 
 var app = express.createServer(express.logger());
