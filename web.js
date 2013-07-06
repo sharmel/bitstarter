@@ -7,7 +7,7 @@ app.get('/', function(request, response) {
 
 
 
- var buffer = new Buffer();  
+ var buffer = new Buffer(25);  
 response.send(fs.readFileSync("index.html"));
 
   });
