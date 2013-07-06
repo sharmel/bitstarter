@@ -1,13 +1,12 @@
-int 1
-var http = require('http');
+var express = require('express');
 var fs = require('fs');
+var app = express.createServer(express.logger());
 
-http.createServer(function(request, response) {
-  response.writeHead(200);
-
-  fs.readFile('index.html', function(err, contents) {
-
+fs.readFile('index.html', function(err, contents) {
+response.writeHead(200);
   });
-  
-  response.end();
-}).listen(8080);
+
+var port = process.env.PORT || 5000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
