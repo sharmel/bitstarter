@@ -4,7 +4,7 @@ var fs = require('fs');
 var app = express.createServer(express.logger());
 
 app.get('/', function(request, response) {
-app.use(express.static(_dirname + '/images'));
+app.use(express.static(__dirname + '/images'));
 
 
 // var buffer = new Buffer("Hello World from index.html", 25);
